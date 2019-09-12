@@ -321,6 +321,8 @@ type StorageSpec struct {
 	EmptyDir *v1.EmptyDirVolumeSource `json:"emptyDir,omitempty"`
 	// A PVC spec to be used by the Prometheus StatefulSets.
 	VolumeClaimTemplate v1.PersistentVolumeClaim `json:"volumeClaimTemplate,omitempty"`
+	// Specify a sub-path inside the referenced volume.
+	SubPath string `json:"subPath,omitempty"`
 }
 
 // QuerySpec defines the query command line flags when starting Prometheus.

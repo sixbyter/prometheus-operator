@@ -543,8 +543,7 @@ func subPathForStorage(s *monitoringv1.StorageSpec) string {
 	if s == nil {
 		return ""
 	}
-
-	return "alertmanager-db"
+	return s.SubPath
 }
 
 func filter(strings []string, f func(string) bool) []string {

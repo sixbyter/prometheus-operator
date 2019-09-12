@@ -871,6 +871,5 @@ func subPathForStorage(s *monitoringv1.StorageSpec) string {
 	if s == nil {
 		return ""
 	}
-
-	return "prometheus-db"
+	return s.SubPath
 }
